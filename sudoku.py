@@ -1,3 +1,4 @@
+# Starting solvable Sudoku board
 sudoku_grid = [
     [5, 0, 0, 2, 0, 4, 8, 0, 0],
     [0, 7, 0, 0, 0, 9, 0, 3, 0],
