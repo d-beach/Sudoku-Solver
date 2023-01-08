@@ -1,6 +1,4 @@
-import numpy as np
-
-sodoku_grid = [
+sudoku_grid = [
     [5, 0, 0, 2, 0, 4, 8, 0, 0],
     [0, 7, 0, 0, 0, 9, 0, 3, 0],
     [0, 1, 0, 0, 3, 0, 0, 4, 0],
@@ -11,8 +9,6 @@ sodoku_grid = [
     [0, 4, 0, 1, 0, 0, 0, 2, 0],
     [0, 0, 5, 8, 0, 2, 0, 0, 7],
 ]
-
-#print(np.matrix(sodoku_grid))
 
 # Function that uses backtracking algorithm through recursion 
 def solver(grid):
@@ -32,8 +28,8 @@ def solver(grid):
 
                 if solver(grid):
                     return True
-                else:
-                    grid[row][col] = 0
+                
+                grid[row][col] = 0
 
     return False
         
@@ -88,6 +84,6 @@ def is_possible(row, col, grid, num):
     # If we've satisfied the three condtions the number is a possible guess --> return True
     return True
 
-print(print_grid(sodoku_grid))
-solver(sodoku_grid)
-print(print_grid(sodoku_grid))
+print(print_grid(sudoku_grid))
+solver(sudoku_grid)
+print(print_grid(sudoku_grid))
